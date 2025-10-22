@@ -30,6 +30,5 @@ class TournamentSelection implements SelectionStrategy {
         }
         return tournament.stream().max(Comparator.comparingDouble(c -> c.fitness)).orElse(null);
     }
-}
-
+}//aly
 // another one left
