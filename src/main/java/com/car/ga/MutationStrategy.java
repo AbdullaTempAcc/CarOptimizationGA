@@ -41,7 +41,9 @@ class NonUniformMutation implements MutationStrategy {
                 index = rand.nextInt(c.genes.size());
             } while (UsedIndices.contains(index));
             UsedIndices.add(index);
-            double delta = (rand.nextDouble() - 0.5) * (MaxVal[index] - MinVal[index]) * 0.4;
+            double delta = (rand.nextDouble() - 0.5) * (MaxVal[index] - MinVal[index]) * 0.4; // change domain from [0-1] to [-.5,.5]
+                                                                                              // To Make the delta with incr or dicr equally
+                                                                                              // 1-0.5= 0.5 ,, 0-0.5 = -0.5
             double mutated = c.genes.get(index) + delta;
 
             // Clamp to valid range

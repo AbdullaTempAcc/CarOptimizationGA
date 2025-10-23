@@ -1,5 +1,6 @@
 package com.car.ga;
 
+// the hole class created to make the target input more efficiency instead of normal list
 public class Car {
     public double speed, power, weight, acceleration, fuelEfficiency;
 

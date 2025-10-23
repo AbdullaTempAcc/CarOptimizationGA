@@ -30,10 +30,10 @@ class MultiPointCrossover implements CrossoverStrategy {
     public List<Chromosome<Double>> crossover(Chromosome<Double> p1, Chromosome<Double> p2) {
         List<Double> child1Genes = new ArrayList<>();
         List<Double> child2Genes = new ArrayList<>();
-        Random rand = new Random();
+        int n = 2;
         for (int i = 0; i < p1.genes.size(); i++) {
-            // Alternate between parents every 2 genes
-            boolean useParent1 = (i / 2) % 2 == 0;
+            // Alternate between parents every n genes
+            boolean useParent1 = (i / n) % 2 == 0;
             child1Genes.add(useParent1 ? p1.genes.get(i) : p2.genes.get(i));
             child2Genes.add(useParent1 ? p2.genes.get(i) : p1.genes.get(i));
 

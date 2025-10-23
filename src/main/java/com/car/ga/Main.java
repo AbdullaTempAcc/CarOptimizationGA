@@ -11,7 +11,7 @@ public class Main {
                 new RouletteWheelSelection(),
                 new UniformCrossover(),
                 new NonUniformMutation(),
-                new SteadyStateReplacement()
+                new Elitism(0.2)
         );
 
         ga.run(population, 100); // Run for 100 generations

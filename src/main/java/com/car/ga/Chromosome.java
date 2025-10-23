@@ -1,6 +1,7 @@
 package com.car.ga;
 import java.util.*;
 
+//  T class to make it usable with any type of genes data
 public class Chromosome<T> {
     public List<T> genes;
     public double fitness;
@@ -9,8 +10,4 @@ public class Chromosome<T> {
         this.genes = genes;
     }
 
-    public Chromosome<T> copy() {
-        return new Chromosome<>(new ArrayList<>(genes));
-
-    }
 }
